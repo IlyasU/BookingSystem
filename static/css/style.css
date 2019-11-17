@@ -1,0 +1,228 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    color: #000;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+h3 {
+    margin: 0;
+}
+
+/* Container
+=====================================*/
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Header
+=======================================*/
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #0d1326;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header__logo {
+    color: #fff;
+}
+
+/* Nav
+========================================*/
+
+.nav {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav__link {
+    color: #aa3e36;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: .5s linear;
+}
+
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.nav__link:hover {
+    color: #fff;
+}
+
+
+/* Intro
+=======================================*/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    height: 750px;
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("../images/bg_intro.jpg") center no-repeat / cover;
+
+    margin-bottom: 100px;
+}
+
+.intro__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #fff;
+}
+
+/* Form
+============================================*/
+.formm {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.form_items {
+    width: 100%;
+    margin-right: 20px;
+
+}
+
+.form_items:last-child {
+    margin-right: 0;
+}
+
+.book-form   label {
+    font-size:15px;
+    color: #333;
+    text-align: left;
+    display: inline-block;
+    /* float: left; */
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.book-form label span {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #2c925e;
+}
+.book-form input[type="text"],.book-form input[type="date"],.book-form input[type="text"],.book-form input[type="email"] {
+    width: 100%;
+    color: #9a9797;
+    outline: none;
+    font-size: 0.9em;
+    line-height: 25px;
+    padding: 5px 15px;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    -webkit-appearance: none;
+    margin-bottom: 5px;
+    background: #333;
+    border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.book-form form input[type="submit"] {
+    text-transform: capitalize;
+    background: #2c925e;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: .6em 2em;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 1px;
+    /* margin-top: 20px; */
+    margin-bottom: 5px;
+    -webkit-appearance: none;
+}
+.book-form {
+    background: none;
+    background: rgba(12, 12, 12, 0.68);
+    background: #fff;
+    padding: 1em 1em 0.5em 1em;
+    margin: 3em auto 0em;
+    border-radius: 5px;
+    width: 1000px;
+}
+.book-form p {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: .8em;
+    letter-spacing: 5px;
+    word-spacing: 7px;
+    text-transform: uppercase;
+}
+.book-form select.form-control {
+    outline: none;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    padding: 7px 10px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    width: 100%;
+    line-height: 25px;
+    background: #333;
+    color: #9a9797;
+    border: 2px solid #fff;
+	box-shadow:none!important;
+}
+
+.book-form input[type=submit]:hover {
+    background: #333;
+    color: #fff;
+}
+.form-control {
+    height: 39px;
+}
+
+/* Top city
+==============================================*/
+
+.city__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner__city h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.city__item img {
+    height: 250px;
+}

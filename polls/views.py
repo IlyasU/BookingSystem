@@ -42,10 +42,10 @@ class MyRegisterFormView(FormView):
 
         # Ссылка, на которую будет перенаправляться пользователь в случае успешной регистрации.
         # В данном случае указана ссылка на страницу входа для зарегистрированных пользователей.
-    success_url = "/index.html/"
+    success_url = "polls/index.html/"
 
         # Шаблон, который будет использоваться при отображении представления.
-    template_name = "signUp.html"
+    template_name = "polls/signUp.html"
 
     def form_valid(self, form):
         form.save()

@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/signUpStyle.css" %}">
     <link rel="stylesheet" href={% static "owlcarousel/assets/owl.carousel.min.css" %}>
     <link rel="stylesheet" href={% static "owlcarousel/assets/owl.theme.default.css" %}>
+    <link rel="stylesheet" href={% static "font-awesome/css/font-awesome.min.css" %}>
     <title>Booking</title>
 </head>
 <body>
@@ -17,11 +18,11 @@
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">
-                    <img src="../../static/images/logo1.png" alt="">
+                    <img src="/static/images/logo1.png" alt="" weight="150" height="60">
                 </div>
                 <nav class="nav">
                     <a href="signUp.html" class="nav__link">Зарегистрироваться</a>
-                    <a href="#" class="nav__link">Личный кабинет</a>
+                    <a href="#" class="nav__link login-link">Личный кабинет</a>
                 </nav>
             </div>
         </div>
@@ -32,36 +33,35 @@
             <h1 class="intro__title">Забронируйте отель по выгодной цене!</h1>
         </div>
         <div class="book-form">
-           <form action="#" method="post" class="formm">
+            <form action="#" method="post" class="formm">
                 <div class="form_items location_table">
-                        <!-- <label> Travel place</label> -->
-                        <select class="form-control">
-                            <option>Укажите место</option>
-                            <option>London</option>
-                            <option>Paris</option>
-                            <option>India</option>
-                            <option>Japan</option>
-                            <option>America</option>
-                        </select>
+                    <!-- <label> Travel place</label> -->
+                    <select class="form-control">
+                        <option>Укажите место</option>
+                        <option>London</option>
+                        <option>Paris</option>
+                        <option>India</option>
+                        <option>Japan</option>
+                        <option>America</option>
+                    </select>
                 </div>
                 <div class="form_items from_in__table">
-                        <!-- <label>Trip in</label> -->
-                        <input name="Text" type="text" value="Прибытие" onfocus="this.value = '';" required="">
+                    <input type="date" class="form-control"  id="date" name="date" placeholder="приезд" required>
                 </div>
                 <div class="form_items from_out__table">
-                        <!-- <label> Trip out</label> -->
-                        <input name="Text" type="text" value="Отъезд" onfocus="this.value = '';" required="">
+
+                    <input type="date" class="form-control" id="date" name="date" placeholder="отъезд" required>
                 </div>
                 <div class="form_items amount_people">
-                        <select class="form-control">
-                            <option>1 гость</option>
-                            <option>2 гостя</option>
-                            <option>3 гостя</option>
-                            <option>4 гостя</option>
-                        </select>
+                    <select class="form-control">
+                        <option>1 гость</option>
+                        <option>2 гостя</option>
+                        <option>3 гостя</option>
+                        <option>4 гостя</option>
+                    </select>
                 </div>
                 <div class="form_items send">
-                      <input type="submit" value="Узнать цены">
+                    <input type="submit" value="Узнать цены">
                 </div>
             </form>
         </div>
@@ -74,22 +74,202 @@
                 <div class="banner__city">
                     <h2>Популярные города</h2>
                 </div>
+                <div class="container">
+                    <div class="container-nav-wrap">
+                        <div class="owl-nav">
+                            <div class="prev">
+                                <i class="fa fa-chevron-left"></i>
+                            </div>
+                                <div class="next">
+                                    <i class="fa fa-chevron-right"></i>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="owl-carousel">
-                    <div class="city__item"><img src="../../static/images/city1.jpg" alt="img"></div>
-                    <div class="city__item"><img src="../../static/images/city2.jpg" alt="img"></div>
-                    <div class="city__item"><img src="/static/images/city3.jpg" alt="img"></div>
-                    <div class="city__item"><img src="/static/images/city4.jpg" alt="img"></div>
-                    <div class="city__item"><img src="/static/images/city5.jpg" alt="img"></div>
-                    <div class="city__item"><img src="/static/images/city6.jpg" alt="img"></div>
-                    <div class="city__item"><img src="/static/images/city7.jpg" alt="img"></div>
-                    <div class="city__item"><img src="/static/images/city8.jpg" alt="img"></div>
+                    <div class="city__item">
+                        <img class="city__photo" src="/static/images/city1.jpg" alt="img">
+
+                        <div class="city__title">
+                            <a href="#"><span>Нью-Йорк</span></a>
+                        </div>
+
+                    </div>
+                    <div class="city__item">
+                        <img class="city__photo" src="/static/images/city2.jpg" alt="img">
+
+                        <div class="city__title">
+                            <a href="#"><span>Лондон</span></a>
+                        </div>
+
+                    </div>
+                    <div class="city__item">
+                        <img class="city__photo" src="/static/images/city3.jpg" alt="img">
+
+                        <div class="city__title">
+                            <a href="#"><span>Париж</span></a>
+                        </div>
+
+                    </div>
+                    <div class="city__item">
+                        <img class="city__photo" src="/static/images/city4.jpg" alt="img">
+
+                        <div class="city__title">
+                            <a href="#"><span>Дубаи</span></a>
+                        </div>
+
+                    </div>
+                    <div class="city__item">
+                        <a class="inner__city"href="#">
+                            <img class="city__photo" src="/static/images/city5.jpg" alt="img">
+                        </a>
+
+                        <div class="city__title">
+                            <a href="#"><span>Москва</span></a>
+                        </div>
+
+                    </div>
+                    <div class="city__item">
+                        <img class="city__photo" src="/static/images/city6.jpg" alt="img">
+
+                        <div class="city__title">
+                            <a href="#"><span>Санкт-Петербург</span></a>
+                        </div>
+
+                    </div>
+                    <div class="city__item">
+                        <img class="city__photo" src="/static/images/city7.jpg" alt="img">
+
+                        <div class="city__title">
+                            <a href="#"><span>Астана</span></a>
+                        </div>
+
+                    </div>
+                    <div class="city__item">
+                        <img class="city__photo" src="/static/images/city8.jpg" alt="img">
+
+                        <div class="city__title">
+                            <a href="#"><span>Алматы</span></a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
+        <form class="login-form" action="#" method="post">
+            <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-help">
+                <label class="login-checkbox">
+                    <input type="checkbox" name="remember" class="visually-hidden">
+                    <span class="checkbox-indicator"></span>
+                    Запомните меня
+                </label>
+                <a class="restore" href="#">Я забыл пароль!</a>
+            </p>
+            <button class="buttonIn" type="submit">Войти</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__copyright">
+                    <span>© 2019 BTB</span>
+                </div>
+                <div class="footer__social">
+                    <a class="footer-social-item facebook" href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a class="footer-social-item vk" href="#">
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                        <span>Вконтакте</span>
+                    </a>
+                    <a class="footer-social-item instagram" href="#">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a class="footer-social-item twitter" href="#">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+                <div class="footer__contact">
+                    <a href="#">8 747 122-92-02</a>
+                    <a href="#">8 701 453-66-10</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var link = document.querySelector(".login-link");
+        var popup = document.querySelector(".modal-login");
+        var bg = document.querySelector(".bg-fall");
+        var close = popup.querySelector(".modal-close");
+        var form = popup.querySelector("form");
+        var login = popup.querySelector("[name=login]");
+        var password = popup.querySelector("[name=password]");
+        var isStorageSupport = true;
+        var storage = "";
+
+        try {
+            storage = localStorage.getItem("login");
+        } catch (err) {
+            isStorageSupport = false;
+        }
+        link.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.add("modal-show");
+            login.focus();
+            if (storage) {
+                login.value = storage;
+                password.focus();
+            } else {
+                login.focus();
+            }
+        });
+        close.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+        });
+        form.addEventListener("submit", function (evt) {
+            if (!login.value || !password.value) {
+                evt.preventDefault();
+                popup.classList.remove("modal-error");
+                popup.offsetWidth = popup.offsetWidth;
+                popup.classList.add("modal-error");
+            } else {
+                if (isStorageSupport) {
+                    localStorage.setItem("login", login.value);
+                }
+            }
+        });
+        window.addEventListener("keydown", function (evt) {
+            if (evt.keyCode === 27) {
+                evt.preventDefault();
+                if (popup.classList.contains("modal-show")) {
+                    popup.classList.remove("modal-show");
+                    popup.classList.remove("modal-error");
+                }
+            }
+        });
+    </script>
     <script src={% static 'libs/jquery/jquery-3.4.1.min.js' %}></script>>
     <script src={% static 'owlcarousel/owl.carousel.min.js' %}></script>>
-     <script src={% static 'js/script.js' %}></script>
+    <script src={% static 'js/script.js' %}></script>
 </body>
 </html>

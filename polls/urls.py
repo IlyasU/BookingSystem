@@ -7,7 +7,7 @@ from django.conf import settings
 
 urlpatterns = [
      url(r'^$', views.index, name='index'),
-     url(r'^registration', views.register, name='register'),
-     url(r'^signUp.html/', views.register, name='registration'),
+     url(r'^registration/$', views.register, name='register'),
+     url(r'^signUp.html/$', views.register, name='registration'),
 
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
